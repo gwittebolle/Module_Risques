@@ -10,7 +10,7 @@ credentials <- data.frame(
 )
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+ui <- secure_app(fluidPage(
 
 
     # Application title
@@ -18,7 +18,7 @@ ui <- fluidPage(
 
     DT::dataTableOutput('ex1')
     
-)
+))
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
