@@ -28,9 +28,9 @@ server <- function(input, output) {
     check_credentials = check_credentials(credentials)
   )
   
-  output$auth_output <- renderPrint({
-    reactiveValuesToList(res_auth)
-  })
+ # output$auth_output <- renderPrint({
+ #   reactiveValuesToList(res_auth)
+ # })
   
     
     output$ex1 <- DT::renderDataTable(
