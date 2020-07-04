@@ -2,6 +2,12 @@ library(shiny)
 library(DT)
 library(tcltk)
 library(readxl)
+library(shinymanager)
+credentials <- data.frame(
+  user = c("shiny", "shinymanager"),
+  password = c("azerty", "12345"),
+  stringsAsFactors = FALSE
+)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
