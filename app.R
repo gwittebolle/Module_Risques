@@ -10,7 +10,7 @@ credentials <- data.frame(
 )
 
 # Define UI for application that draws a histogram
-ui <- secure_app(fluidPage(
+ui <-  secure_app(fluidPage(
 
 
     # Application title
@@ -23,17 +23,17 @@ ui <- secure_app(fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
-
   res_auth <- secure_server(
     check_credentials = check_credentials(credentials)
   )
   
- # output$auth_output <- renderPrint({
- #   reactiveValuesToList(res_auth)
- # })
+  # output$auth_output <- renderPrint({
+  #   reactiveValuesToList(res_auth)
+  # })
+  
   
     
-    output$ex1 <- DT::renderDataTable(
+    output$ex1 <-       DT::renderDataTable(
 
       DT::datatable(read_excel(paste(getwd(),"/Data-TGE.xlsx", sep="")), rownames = FALSE, filter = 'top', options = list(pageLength = 10, searching = TRUE, bfilter = 0))
     )
